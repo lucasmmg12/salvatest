@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-600 font-sans antialiased;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900 font-sans;
+  }
+}
+
+/* Clases de Componentes del Sistema de Diseño ECAR */
+@layer components {
+  /* Tarjetas (Cards) */
+  .light-card {
+    @apply bg-white border border-gray-200 rounded-xl p-5 shadow-sm transition-all duration-200;
+  }
+  
+  .light-card-interactive {
+    @apply bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 overflow-hidden;
+  }
+
+  /* Botones */
+  .btn-primary {
+    @apply bg-ecar-blue text-white px-4 py-2 rounded-lg font-bold text-sm flex items-center gap-2 shadow-md hover:bg-ecar-blueDark hover:shadow-lg transition-all duration-200 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-bold text-sm flex items-center gap-2 border border-gray-200 hover:bg-gray-200 transition-all duration-200 active:scale-[0.98];
+  }
+
+  .btn-danger {
+    @apply bg-ecar-red text-white px-4 py-2 rounded-lg font-bold text-sm flex items-center gap-2 hover:bg-red-700 transition-all duration-200 active:scale-[0.98];
+  }
+
+  .btn-contextual {
+    @apply bg-emerald-600 text-white px-4 py-1.5 rounded-lg text-xs font-bold hover:bg-emerald-700 transition-all duration-200 active:scale-[0.98];
+  }
+
+  /* Tabla de Datos */
+  .data-table-wrapper {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden;
+  }
+
+  .data-table {
+    @apply w-full text-sm text-left;
+  }
+
+  .data-table-thead {
+    @apply bg-gray-100/50 border-b border-gray-200 text-xs font-bold text-gray-500 uppercase;
+  }
+
+  .data-table-th {
+    @apply px-4 py-3 font-bold;
+  }
+
+  .data-table-tr {
+    @apply hover:bg-gray-50 border-b border-gray-100 transition-colors duration-150;
+  }
+
+  .data-table-td {
+    @apply px-4 py-3 align-middle;
+  }
+
+  /* Badges de Estado */
+  .badge-pending {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-bold bg-yellow-100 text-yellow-700;
+  }
+
+  .badge-success {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 text-green-700;
+  }
+
+  .badge-danger {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-bold bg-red-100 text-red-700;
+  }
+
+  .badge-info {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-700;
+  }
+
+  .badge-gray {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600;
+  }
+
+  /* Modales */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 backdrop-blur-sm;
+  }
+
+  .modal-content {
+    @apply bg-white rounded-xl shadow-xl max-w-lg w-full p-6 space-y-4 max-h-[90vh] overflow-y-auto transition-all duration-200;
+  }
+
+  /* Formulario Inputs */
+  .form-label {
+    @apply text-xs font-bold text-gray-500 uppercase tracking-wider mb-1 block;
+  }
+
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-ecar-blue/30 focus:border-ecar-blue transition-all duration-200 bg-white;
+  }
+
+  .form-select {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ecar-blue/30 focus:border-ecar-blue transition-all duration-200 bg-white;
+  }
+}
+
+/* Ocultar scrollbars pero mantener funcionalidad */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
