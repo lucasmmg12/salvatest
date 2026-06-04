@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         ecar: {
-          blue: "#115C9C",
-          blueDark: "#0B477D",
+          blue: "#15803D",     // Verde esmeralda corporativo
+          blueDark: "#14532D", // Verde pino oscuro para el sidebar
           red: "#EF4444",
           redLight: "#FEE2E2",
         }

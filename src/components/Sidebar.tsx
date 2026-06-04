@@ -42,7 +42,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
   ];
 
   return (
-    <aside className="w-64 bg-ecar-blueDark text-blue-100 flex flex-col border-r border-[#08355e] h-screen fixed top-0 left-0 z-20">
+    <aside className="w-64 bg-ecar-blueDark text-blue-100 flex flex-col border-r border-[#0f3d21] h-screen fixed top-0 left-0 z-20">
       {/* Panel Superior Logo */}
       <div className="p-6 bg-white border-b border-gray-200 flex items-center justify-center gap-3">
         <div className="w-9 h-9 rounded-xl bg-ecar-blue flex items-center justify-center shadow-md animate-pulse">
@@ -97,7 +97,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
       </div>
 
       {/* Footer del Sidebar */}
-      <div className="p-4 border-t border-white/5 bg-[#073055] text-center">
+      <div className="p-4 border-t border-white/5 bg-[#0e3a1f] text-center">
         <span className="text-[9px] font-bold tracking-widest text-blue-200/30 uppercase block">
           SISTEMA CREADO POR GROW LABS
         </span>
